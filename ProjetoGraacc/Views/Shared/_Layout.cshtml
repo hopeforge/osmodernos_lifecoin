@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProjetoGraacc</title>
+
+    <!-- Icons-->
+    <link href="~/lib/@@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
+    <link href="~/lib/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+    <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/lib/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="~/lib/datatables/css/dataTables.bootstrap4.css" />
+
+    <!-- Template styles -->
+    <link href="~/css/style.css" rel="stylesheet">
+    <link href="~/vendors/pace-progress/css/pace.css" rel="stylesheet">
+
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />*@
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show bg-gray-200">
+
+    <!-- APP-HEADER-->
+    <partial name="_app-header" />
+    <!-- /APP-HEADER-->
+
+    <partial name="_CookieConsentPartial" />
+
+    <div class="app-body">
+        <div class="sidebar">
+            <!-- SIDEBAR-NAV -->
+            <partial name="_sidebar-nav" />
+            <!-- /SIDEBAR-NAV -->
+            <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+        </div>
+
+        <main class="main">
+            <!-- VIEW-BREADCRUMBS -->
+            @RenderSection("Breadcrumbs", required: false)
+            <!-- /VIEW-BREADCRUMBS -->
+
+            <div class="container-fluid">
+                <!-- VIEW-STYLES -->
+                @RenderSection("Styles", required: false)
+                <!-- /VIEW-STYLES -->
+                <div class="animated fadeIn">
+                    <!-- VIEW-CONTENT -->
+                    @RenderBody()
+                    <!-- /VIEW-CONTENT -->
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer class="app-footer">
+        <div>
+            © Copyright 2018 <a href="https://graacc.org.br/" target="_blank">GRAACC</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+
+    <script src="~/lib/popper.js/dist/umd/popper.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/lib/pace-progress/pace.min.js"></script>
+    <script src="~/lib/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+    <script src="~/lib/@@coreui/coreui/dist/js/coreui.min.js"></script>
+
+    <!-- DataTables -->
+    <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/lib/datatables/js/dataTables.bootstrap4.js"></script>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "robograacc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx pm2 start index.js --name justiceiro",
+    "stop": "npx pm2 stop justiceiro"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "html-to-text": "^5.1.1",
+    "mongoose": "^5.7.14",
+    "node-cron": "^2.0.3",
+    "puppeteer": "^2.0.0"
+  }
+}
